@@ -1,0 +1,41 @@
+/*
+* {
+    border: 1px dashed red;
+    min-height: 10px;
+    min-width: 10px;
+}
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);  /* 8 columns */
+    grid-template-rows: repeat(8, 100px);     /* 8 rows */
+    gap: 5px;
+    width: 835px;
+    height: 835px;
+    margin: 0 auto;
+  }
+
+.grid-item {
+    position: relative;  /* Needed for absolute positioning of the icon */
+    display: flex;
+    background-color: #3498db;
+    border: 1px solid whitesmoke;
+    text-align: center;  /* Centers content (icon) inside the grid item */
+    border-radius: 3px;
+    }
+  
+  .grid-item i {
+    position: absolute;  /* Positions icon inside grid item */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centers the icon */
+    opacity: 0;  /* Icon is hidden by default */
+    transition: opacity 0.3s ease;  /* Smooth transition for opacity */
+    font-size: 35px;
+  }
+  
+  .grid-item:hover i {
+    opacity: 1;  /* Icon becomes visible when hovering over the grid item */
+  }
+
